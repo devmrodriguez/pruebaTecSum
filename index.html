@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología y Suministros</title>
+
+    <meta name="description" content="Página web de una empresa de tecnología">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <!-- PT SERIF -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- MERRIWEATHER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/fd95485124.js" crossorigin="anonymous"></script>
+
+    <!-- PRELOAD -->
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="preload" href="./css/aos.css" as="style">
+    <link rel="stylesheet" href="./css/aos.css">
+    <script src="./js/aos.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header" id="header">
+            <div class="contenedor barra">
+                <div class="logo-header">
+                    <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+                </div>
+                <nav class="nav-menu">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fa-solid fa-bars menu-icon"></i>
+                    </label>
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./pages/quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="./pages/servicios.html">Servicios</a></li>
+                        <li><a href="./pages/contactanos.html">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="contenedor-hero">
+            <div class="wrap">
+                <div class="box" data-aos="fade-up">
+                    <h1>Tecnología y Suministros</h1>
+                    <p>Si lo imaginas, lo puedes tener..</p>
+                    <div class="botones">
+                        <a href="./pages/contactanos.html" class="btn1">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INDICADOR DE CARGA -->
+    <div class="contenedor-preloader" id="contenedor-preloader">
+        <div class="preloader">
+ 
+        </div>
+
+        <img src="./img/Logo_preloader.png" alt="" srcset="">
+    </div>
+    
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+        <div class="contenido-principal" data-aos="fade-up">
+
+            <h2 class="titulos-paginas">Servicios</h2>
+
+            <hr class="hr-paginas">
+
+            <div class="servicios">
+                <section data-aos="fade-right" class="servicio">
+                    <h3>Mantenimiento preventivo</h3>
+
+                    <div class="iconos">
+                        <img src="../img/reparación.svg" alt="">
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate autem, necessitatibus rerum
+                        aperiam
+                        incidunt quaerat minus! Reprehenderit iusto modi minima labore illum amet id rem! Dolorem
+                        quaerat
+                        sint
+                        autem ex.</p>
+                </section>
+
+                <section data-aos="fade-up" class="servicio">
+                    <h3>Reparación</h3>
+
+                    <div class="iconos">
+                        <img src="../img/mantenimiento.svg" alt="">
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate autem, necessitatibus rerum
+                        aperiam
+                        incidunt quaerat minus! Reprehenderit iusto modi minima labore illum amet id rem! Dolorem
+                        quaerat
+                        sint
+                        autem ex.</p>
+                </section>
+
+                <section data-aos="fade-left" class="servicio">
+                    <h3>Diagnóstico</h3>
+
+                    <div class="iconos">
+                        <img src="../img/diagnostico.svg" alt="">
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate autem, necessitatibus rerum
+                        aperiam
+                        incidunt quaerat minus! Reprehenderit iusto modi minima labore illum amet id rem! Dolorem
+                        quaerat
+                        sint
+                        autem ex.</p>
+                </section>
+            </div>
+            <div class="btn-servicios">
+                <a href="./pages/servicios.html" class="servicios-enlace">Mas información</a>
+            </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="./img/logo.png" alt="" class="logo">
+        <div class="social-icons-container">
+            <a href="https://www.facebook.com/TecSum/" target="_blank" class="social-icon"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"></a>
+            <a href="" class="social-icon"></a>
+        </div>
+        <span class="copyright">Desarrollado y diseñado por |
+            Mario Rodríguez
+            © 2023. Todos los derechos reservados.</span>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

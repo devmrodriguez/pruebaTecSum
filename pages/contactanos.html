@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología y Suministros</title>
+
+    <meta name="description" content="Página web de una empresa de tecnología">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+    <!-- GOOGLE FONTS -->
+    <!-- PT SERIF -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- MERRIWEATHER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/fd95485124.js" crossorigin="anonymous"></script>
+
+    <!-- PRELOAD -->
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <link rel="preload" href="../css/main.css" as="style">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="preload" href="../css/aos.css" as="style">
+    <link rel="stylesheet" href="../css/aos.css">
+    <script src="../js/aos.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header" id="header">
+            <div class="contenedor barra">
+                <div class="logo-header">
+                    <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+                </div>
+                <nav class="nav-menu">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fa-solid fa-bars menu-icon"></i>
+                    </label>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contactanos.html">Contáctanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- INDICADOR DE CARGA -->
+    <div class="contenedor-preloader" id="contenedor-preloader">
+        <div class="preloader">
+
+        </div>
+
+        <img src="../img/Logo_preloader.png" alt="" srcset="">
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+        <div class="contenido-principal">
+            <h2 class="titulos-paginas" data-aos="fade-up">Contáctanos</h2>
+
+            <hr class="hr-paginas" data-aos="fade-up">
+
+            <p class="parrafos" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis
+                nemo voluptatem modi consequatur
+                quas iste beatae aperiam a consequuntur laborum doloremque reiciendis iusto, sint iure libero harum.
+                Neque modi, doloremque quasi dicta officia nam, eius ratione deleniti nemo cum error voluptatum
+                distinctio, corporis vero facere quis laudantium quaerat. Quam.</p>
+
+            <div class="mapa" data-aos="fade-up">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.0135817043033!2d-89.22597922038894!3d13.695506049332074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f633018aba54333%3A0xa0d4bc47a42922cf!2sTecnolog%C3%ADa%20y%20Suministros%2C%20S.A.%20de%20C.V.!5e0!3m2!1ses-419!2ssv!4v1672530773358!5m2!1ses-419!2ssv"
+                    width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contenedor-formulario" data-aos="fade-up">
+                <div class="formulario">
+                    <h4>Estamos para asesorarte</h4>
+                    <form id="form" class="form" autocomplete="off" method="POST">
+                        <div class="form-control">
+                            <label for="nombre">Nombre: </label>
+                            <input id="nombre" type="text" class="campo">
+                            <p></p>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="email">Email: </label>
+                            <input id="email" type="email" class="campo">
+                            <p></p>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="empresa">Empresa: </label>
+                            <input id="empresa" type="text" class="campo">
+                            <p></p>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="telefono">Teléfono: </label>
+                            <input id="telefono" class="validanumericos campo" type="text" maxlength="8">
+                            <p></p>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="comentario">Comentario: </label>
+                            <textarea name="comentario" id="comentario" class="campo" cols="30" rows="10"></textarea>
+                            <p></p>
+                        </div>
+    
+                        <div class="form-btn">
+                            <button class="btnForm">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="../img/logo.png" alt="" class="logo">
+        <div class="social-icons-container">
+            <a href="https://www.facebook.com/TecSum/" target="_blank" class="social-icon"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"></a>
+            <a href="" class="social-icon"></a>
+        </div>
+        <span class="copyright">Desarrollado y diseñado por |
+            Mario Rodríguez
+            © 2023. Todos los derechos reservados.</span>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
