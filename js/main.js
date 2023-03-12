@@ -67,7 +67,7 @@ formulario.addEventListener('submit', function (e) {
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://pruebatecsum.netlify.app/enviarCorreo');
+    xhr.open('POST', 'https://pruebatecsum.netlify.app/enviarCorreo.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
         if (xhr.status === 200) {
