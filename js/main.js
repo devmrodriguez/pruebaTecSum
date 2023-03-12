@@ -86,7 +86,7 @@ formulario.addEventListener('submit', function (e) {
         headers: {
             'Authorization': `Bearer ${API_KEY}`,
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://pruebatecsum.netlify.app/'
+            'Access-Control-Allow-Origin': 'https://sendgrid.api-docs.io'
         },
         body: JSON.stringify(data),
     })
