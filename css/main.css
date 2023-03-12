@@ -335,6 +335,67 @@ nav {
     background-color: var(--color4);
 }
 
+/* CSS PARA LA SECCIÓN PET-FRIENDLY */
+.pet-friendly {
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
+.pet-friendly-info {
+    width: 100%;
+    text-align: justify;
+}
+
+.pet-friendly h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.pet-friendly .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.pet-friendly img {
+    border-radius: 1rem;
+}
+
+.pet-friendly ul {
+    list-style: circle;
+    width: fit-content;
+}
+
+.pet-friendly ul li {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+
+}
+
+.pet-friendly ul li:before {
+    margin-right: .5rem;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 767px) {
+    .pet-friendly .content {
+        flex-direction: column;
+    }
+
+    .pet-friendly img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .pet-friendly p {
+        width: 100%;
+    }
+}
+
 /* FOOTER */
 footer {
     width: 100%;
@@ -487,6 +548,7 @@ footer {
 .btn-servicios {
     display: flex;
     justify-content: center;
+    margin-bottom: 4rem;
 }
 
 .servicios-enlace:hover {
