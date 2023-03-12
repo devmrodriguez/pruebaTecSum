@@ -53,15 +53,11 @@ empresaInput.addEventListener('input', leerTexto);
 telefenoInput.addEventListener('input', leerTexto);
 mensajeTextArea.addEventListener('input', leerTexto);
 
-// Reemplaza con tu propia API Key y correo electrónico de destino
-const API_KEY = 'TqUkzvg-Q2iWFPNSx4oyjw';
-const TO_EMAIL = 'mariorocko99@gmail.com';
 
 /* El evento de Submit */
 formulario.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    console.log(datos);
     // Validar el Formulario
     const { nombre, email, empresa, telefono, mensaje } = datos;
 
@@ -70,40 +66,19 @@ formulario.addEventListener('submit', function (e) {
         return; // Corta la ejecucion del codigo
     }
 
-    const data = {
-        personalizations: [
-            {
-                to: [{ email: TO_EMAIL }],
-                subject: `Mensaje de ${nombre}`,
-            },
-        ],
-        from: { email: email },
-        content: [{ type: 'text/plain', value: mensaje }],
-    };
+    const serviceID = 'service_v2l92qm';
+    const templateID = 'template_gmedrq5';
 
-    fetch('https://api.sendgrid.com/v3/mail/send', {
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${API_KEY}`,
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://pruebatecsum.netlify.app/',
-            'Access-Control-Allow-Methods': 'POST'
-        },
-        body: JSON.stringify(data),
-    })
-        .then(response => {
-            if (response.status === 202) {
-                // Enviar el Formulario
-                mostrarAlerta('Mensaje enviado correctamente');
-                limpiarFormulario();
-            } else {
-                // Enviar el Formulario
-                mostrarAlerta('Hubo un error al enviar el correo', true);
-                limpiarFormulario();
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+    // Enviar el correo electrónico utilizando EmailJS
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            // El correo electrónico se ha enviado correctamente
+            mostrarAlerta('Mensaje enviado correctamente');
+            limpiarFormulario();
+        }, (err) => {
+            // Ha habido un error al enviar el correo electrónico
+            mostrarAlerta('Hubo un error al enviar el correo', true);
+            limpiarFormulario();
         });
 });
 

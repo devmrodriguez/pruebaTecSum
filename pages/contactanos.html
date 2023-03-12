@@ -38,7 +38,6 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header>
         <nav>
@@ -102,27 +101,27 @@
             <div data-aos="fade-up" class="contacto-bg">
             </div>
 
-            <form method="post" data-aos="fade-up" class="formulario">
+            <form method="post" data-aos="fade-up" id="form" class="formulario">
                 <h4>Estamos para asesorarte</h4>
                 <div class="campo">
                     <label class="campo__label" for="nombre">Nombre: </label>
-                    <input class="campo__field" type="text" placeholder="Nombre" id="nombre">
+                    <input class="campo__field" type="text" name="nombre" placeholder="Nombre" id="nombre">
                 </div>
                 <div class="campo">
                     <label class="campo__label" for="email">E-mail: </label>
-                    <input class="campo__field" type="email" placeholder="Correo Electronico" id="email">
+                    <input class="campo__field" type="email" name="email" placeholder="Correo Electronico" id="email">
                 </div>
                 <div class="campo">
                     <label class="campo__label" for="empresa">Empresa: </label>
-                    <input class="campo__field" type="text" placeholder="Empresa" id="empresa">
+                    <input class="campo__field" type="text" name="empresa" placeholder="Empresa" id="empresa">
                 </div>
                 <div class="campo">
                     <label class="campo__label" for="telefeno">Teléfono: </label>
-                    <input class="campo__field" type="text" placeholder="Teléfeno" id="telefono">
+                    <input class="campo__field" type="text" name="telefono" placeholder="Teléfeno" id="telefono">
                 </div>
                 <div class="campo">
                     <label class="campo__label" for="mensaje">Mensaje: </label>
-                    <textarea class="campo__field  campo__field--textarea" id="mensaje"></textarea>
+                    <textarea class="campo__field  campo__field--textarea" name="mensaje" id="mensaje"></textarea>
                 </div>
 
                 <div class="campo">
@@ -145,7 +144,12 @@
             © 2023. Todos los derechos reservados.</span>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('YifvSHa2C9yi7TwNu')
+    </script>
     <script src="../js/main.js"></script>
+
 </body>
 
 </html>
