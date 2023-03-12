@@ -67,7 +67,7 @@ formulario.addEventListener('submit', function (e) {
     }
 
     const serviceID = 'service_v2l92qm';
-    const templateID = 'template_gmedrq5';
+    const templateID = 'template_1jvhw4i';
 
     // Enviar el correo electrónico utilizando EmailJS
     emailjs.sendForm(serviceID, templateID, this)
