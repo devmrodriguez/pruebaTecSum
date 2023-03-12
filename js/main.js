@@ -53,6 +53,10 @@ empresaInput.addEventListener('input', leerTexto);
 telefenoInput.addEventListener('input', leerTexto);
 mensajeTextArea.addEventListener('input', leerTexto);
 
+// Reemplaza con tu propia API Key y correo electrónico de destino
+const API_KEY = 'TqUkzvg-Q2iWFPNSx4oyjw';
+const TO_EMAIL = 'mariorocko99@gmail.com';
+
 /* El evento de Submit */
 formulario.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -66,20 +70,40 @@ formulario.addEventListener('submit', function (e) {
         return; // Corta la ejecucion del codigo
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://pruebatecsum.netlify.app/enviarCorreo.php');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            // Enviar el Formulario
-            mostrarAlerta('Mensaje enviado correctamente');
-            limpiarFormulario();
-        } else {
-            alert('Error al enviar correo');
-            limpiarFormulario();
-        }
+    const data = {
+        personalizations: [
+            {
+                to: [{ email: TO_EMAIL }],
+                subject: `Mensaje de ${nombre}`,
+            },
+        ],
+        from: { email: email },
+        content: [{ type: 'text/plain', value: mensaje }],
     };
-    xhr.send(new FormData(formulario));
+
+    fetch('https://api.sendgrid.com/v3/mail/send', {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${API_KEY}`,
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'https://pruebatecsum.netlify.app/'
+        },
+        body: JSON.stringify(data),
+    })
+        .then(response => {
+            if (response.status === 202) {
+                // Enviar el Formulario
+                mostrarAlerta('Mensaje enviado correctamente');
+                limpiarFormulario();
+            } else {
+                // Enviar el Formulario
+                mostrarAlerta('Hubo un error al enviar el correo', true);
+                limpiarFormulario();
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 });
 
 
